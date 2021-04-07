@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>General Information: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Центр Зайнятості населення:  Загальна форма</h1>
+    <form action="#" th:action="@{/geninform}" th:object="${geninform}" method="post">
+    	<p>Id: <input type="text" th:field="*{id}" /></p>
+        <p>Message: <input type="text" th:field="*{content}" /></p>
+        <p><input type="submit" value="Надіслати" /> <input type="reset" value="Скасувати" /></p>
+    </form>
+</body>
+</html>
