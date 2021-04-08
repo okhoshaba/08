@@ -18,7 +18,10 @@ public class EmplcentrController {
   @PostMapping("/geninform")
   public String genSubmit(@ModelAttribute GenInform geninform, Model model) {
     model.addAttribute("geninform", geninform);
-    return "genresult";
+    if (geninform.getId() > 10L)
+	    return "genresult";
+    else
+	    return "generror";
   }
 
 }
