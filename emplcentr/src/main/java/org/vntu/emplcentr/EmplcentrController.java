@@ -18,10 +18,22 @@ public class EmplcentrController {
   @PostMapping("/geninform")
   public String genSubmit(@ModelAttribute GenInform geninform, Model model) {
     model.addAttribute("geninform", geninform);
-    if (geninform.getId() < 10L)
+    if (geninform.getId() < 0L)
 	    return "generrorIdNumber";
 
     return "genresult";
+  }
+
+  @GetMapping("/fulltime")
+  public String fullTimeForm(Model model) {
+    model.addAttribute("fulltime", new FullTime());
+    return "fulltime";
+  }
+
+  @PostMapping("/fulltime")
+  public String genSubmit(@ModelAttribute FullTime fulltime, Model model) {
+    model.addAttribute("fulltime", fulltime);
+    return "fulltimeresult";
   }
 
 }
