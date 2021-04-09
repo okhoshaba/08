@@ -1,13 +1,17 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head> 
-    <title>Getting Started: Handling Form Submission</title>
+    <title>Автоматизована система</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<h1>Result</h1>
-    <p th:text="'id: ' + ${geninform.id}" />
-    <p th:text="'content: ' + ${geninform.content}" />
+	<h1>Центр Зайнятості населення</h1>
+	<h2>Автоматизована система: Результати заповнення загальної форми:</h2>
+    <p th:text="'Ідентифікаційних номер: ' + ${geninform.getId()}" />
+    <p th:text="'Призвище, Ім\'я та По-батькові: ' + ${geninform.getFullName()}" />
+    <p th:text="'Адреса: ' + ${geninform.getAddress()}" />
+    <p th:text="'Вік: ' + ${geninform.getAge()}" />
+    <p th:text="'Стать: ' + ${geninform.getSx()}" />
     <a href="/geninform">Submit another message</a>
 </body>
 </html>

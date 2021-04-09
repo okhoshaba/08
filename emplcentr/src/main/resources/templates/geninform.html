@@ -1,14 +1,18 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
 <head> 
-    <title>General Information: Handling Form Submission</title>
+    <title>Автоматизована система</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<h1>Центр Зайнятості населення:  Загальна форма</h1>
+	<h1>Центр Зайнятості населення</h1>
+	<h2>Автоматизована система:  Заповнення загальної форми</h2>
     <form action="#" th:action="@{/geninform}" th:object="${geninform}" method="post">
-    	<p>Id: <input type="text" th:field="*{id}" /></p>
-        <p>Message: <input type="text" th:field="*{content}" /></p>
+    	<p>Ідентифікаційний номер: <input type="text" th:field="*{id}" /></p>
+        <p>Призвище, Ім'я та По-батькові: <input type="text" th:field="*{fullName}" /></p>
+        <p>Адреса: <input type="text" th:field="*{address}" /></p>
+        <p>Вік: <input type="text" th:field="*{age}" /></p>
+        <p>Стать: <input type="text" th:field="*{sx}" /></p>
         <p><input type="submit" value="Надіслати" /> <input type="reset" value="Скасувати" /></p>
     </form>
 </body>
