@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Автоматизована система</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Центр Зайнятості населення</h1>
+	<h2>Автоматизована система:  Заповнення форми для постійної роботи</h2>
+    <p th:text="'Id: ' + ${fulltime.getId()}" />
+    <p th:text="'Назва основної роботи: ' + ${fulltime.getMainWork()}" />
+    <p th:text="'Досвід роботи: ' + ${fulltime.getExpirience()}" />
+    <p th:text="'Спеціальність: ' + ${fulltime.getSpeciality()}" />
+    <a href="/fulltime">Submit another message</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Автоматизована система</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Центр Зайнятості населення</h1>
+	<h2>Автоматизована система:  Заповнення форми для постійної роботи</h2>
+    <form action="#" th:action="@{/fulltime}" th:object="${fulltime}" method="post">
+        <p>Id: <input type="text" th:field="*{id}" /></p>
+        <p>Назва основної робота: <input type="text" th:field="*{mainWork}" /></p>
+        <p>Досвід роботи: <input type="text" th:field="*{expirience}" /></p>
+        <p>Спеціальність: <input type="text" th:field="*{speciality}" /></p>
+        <p><input type="submit" value="Надіслати" /> <input type="reset" value="Скасувати" /></p>
+    </form>
+</body>
+</html>
