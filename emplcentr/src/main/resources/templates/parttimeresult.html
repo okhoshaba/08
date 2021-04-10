@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Автоматизована система</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Центр Зайнятості населення</h1>
+	<h2>Автоматизована система:  Заповнення форми для часткової роботи</h2>
+    <p th:text="'Ідентифікаційний номер: ' + ${parttime.getId()}" />
+    <p th:text="'Назва часткової роботи: ' + ${parttime.getRelatedWork()}" />
+    <p th:text="'Процентна ставка: ' + ${parttime.getInterestRate()}" />
+    <a href="/parttime">Продовжити набір форми</a>
+</body>
+</html>

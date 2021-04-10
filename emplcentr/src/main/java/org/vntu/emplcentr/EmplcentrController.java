@@ -36,4 +36,16 @@ public class EmplcentrController {
     return "fulltimeresult";
   }
 
+  @GetMapping("/parttime")
+  public String partTimeForm(Model model) {
+    model.addAttribute("parttime", new PartTime());
+    return "parttime";
+  }
+
+  @PostMapping("/parttime")
+  public String genSubmit(@ModelAttribute PartTime parttime, Model model) {
+    model.addAttribute("parttime", parttime);
+    return "parttimeresult";
+  }
+
 }
