@@ -21,6 +21,9 @@ public class EmplcentrController {
     if (geninform.getId() < 0L)
 	    return "generrorIdNumber";
 
+    if (geninform.getFullName() == "")
+	    return "generrorIdNumber";
+
     return "genresult";
   }
 
