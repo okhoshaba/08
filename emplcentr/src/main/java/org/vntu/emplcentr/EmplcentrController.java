@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class EmplcentrController {
@@ -50,5 +52,10 @@ public class EmplcentrController {
     model.addAttribute("parttime", parttime);
     return "parttimeresult";
   }
+
+	@RequestMapping("/test")
+	public @ResponseBody String greeting() {
+		return "Automated system testing.";
+	}
 
 }
